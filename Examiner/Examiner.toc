@@ -1,0 +1,32 @@
+## Interface: 90001
+## Version: 20.10.31
+## Title: Examiner
+## Author: Aezay (Earthen Ring EU)
+## Notes: Advanced Inspection Mod of Gear, Talents, Honor, Arena and Achievements.
+## SavedVariables: Examiner_Config, Examiner_Cache
+
+## libs ##
+LibGearExam\LibGearExam.xml
+Libs\AzDialog.lua
+Libs\AzDropDown.lua
+Libs\LibTableRecycler.lua
+Libs\LibItemString.lua
+Libs\LibHeroicItem.lua
+
+## core ##
+Examiner.lua
+modcore.lua
+
+## modules ##
+Modules\modlist.lua
+Modules\itemslots.lua
+Modules\config.lua
+Modules\cache.lua
+Modules\stats.lua
+Modules\pvp.lua
+Modules\feats.lua
+Modules\talents.lua
+Modules\gearlist.lua
+Modules\itemusage.lua
+#Modules\guild.lua
+Modules\delayedscan.lua

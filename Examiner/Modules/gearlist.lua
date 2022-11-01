@@ -1,4 +1,4 @@
-local ex = Examiner;
+Examiner/Examiner.toclocal ex = Examiner;
 
 -- Module
 local mod = ex:CreateModule("Gear","Gear List");
@@ -183,16 +183,16 @@ function UpdateAttachItems()
 				end
 			end
 			-- Enchant
-			local enchantID, enchantName = LibGearExam:GetEnchantInfo(link);
+			local enchantID, enchantName = LibEnchantInfo:GetEnchantInfo(link);
 			if (enchantID) then
 				--btn.enchant:SetText(enchantName:gsub("and ","and\n"));
-				enchantName = enchantName:gsub("and", "&");
-				enchantName = enchantName:gsub("Attack Power", "AP");
-				enchantName = enchantName:gsub("Spell Power", "SP");
-				enchantName = enchantName:gsub("Critical strike rating", "Crit");
-				enchantName = enchantName:gsub("Critical Strike Rating", "Crit");
-				enchantName = enchantName:gsub("Resilience Rating", "Resilience");
-				enchantName = enchantName:gsub("Mana every 5 seconds", "MP5");
+				--enchantName = enchantName:gsub("and", "&");
+				--enchantName = enchantName:gsub("Attack Power", "AP");
+				--enchantName = enchantName:gsub("Spell Power", "SP");
+				--enchantName = enchantName:gsub("Critical strike rating", "Crit");
+				--enchantName = enchantName:gsub("Critical Strike Rating", "Crit");
+				--enchantName = enchantName:gsub("Resilience Rating", "Resilience");
+				--enchantName = enchantName:gsub("Mana every 5 seconds", "MP5");
 				btn.enchant:SetText(enchantName);
 				btn.enchant:SetTextColor(0.5,1,0.5);
 			else
@@ -276,16 +276,16 @@ function UpdateShownItems(self)
 				end
 			end
 			-- Enchant
-			local enchantID, enchantName = LibGearExam:GetEnchantInfo(link);
+			local enchantID, enchantName = LibEnchantInfo:GetEnchantInfo(link);
 			if (enchantID) then
 				--btn.enchant:SetText(enchantName:gsub("and ","and\n"));
-				enchantName = enchantName:gsub("and", "&");
-				enchantName = enchantName:gsub("Attack Power", "AP");
-				enchantName = enchantName:gsub("Spell Power", "SP");
-				enchantName = enchantName:gsub("Critical strike rating", "Crit");
-				enchantName = enchantName:gsub("Critical Strike Rating", "Crit");
-				enchantName = enchantName:gsub("Resilience Rating", "Resilience");
-				enchantName = enchantName:gsub("Mana every 5 seconds", "MP5");
+				--enchantName = enchantName:gsub("and", "&");
+				--enchantName = enchantName:gsub("Attack Power", "AP");
+				--enchantName = enchantName:gsub("Spell Power", "SP");
+				--enchantName = enchantName:gsub("Critical strike rating", "Crit");
+				--enchantName = enchantName:gsub("Critical Strike Rating", "Crit");
+				--enchantName = enchantName:gsub("Resilience Rating", "Resilience");
+				--enchantName = enchantName:gsub("Mana every 5 seconds", "MP5");
 				btn.enchant:SetText(enchantName);
 				btn.enchant:SetTextColor(0.5,1,0.5);
 			else

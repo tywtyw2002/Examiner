@@ -71,8 +71,37 @@ end
 
 -- UpdateSlot: Updates slot from "button.link"
 function mod:UpdateItemSlots()
+	--GS
+	local GearScore = 0;
+	local TitanGrip = 1;
+	local TempScore;
+	local isHunter = (ex.info.classFixed == "HUNTER");
+
+	if ex.info.classFixed == "WARRIOR" then
+		local mh = ex.info.Items["MainHandSlot"];
+		local oh = ex.info.Items["SecondaryHandSlot"];
+		if mh and select(9, GetItemInfo) == "INVTYPE_2HWEAPON" then
+			TitanGrip = 0.5;
+		end
+	end
+	--
 	for index, button in ipairs(self.slotBtns) do
 		local link = ex.info.Items[button.slotName];
+		--GS
+		TempScore = LibGearScoreMod.GearScore_GetItemScore(link);
+		if isHunter and (button.slotName == "MainHandSlot" or button.slotName == "SecondaryHandSlot") then
+			TempScore = TempScore * 0.3164;
+		end
+		if isHunter and (button.slotName == "RangedSlot") then
+			TempScore = TempScore * 5.3224;
+		end
+		if (button.slotName == "MainHandSlot" or button.slotName == "SecondaryHandSlot") then
+			TempScore = TempScore * TitanGrip;
+		end
+
+		GearScore = GearScore + TempScore
+		-- end GS
+
 		if (cfg.alwaysShowItemLevel) then
 			button.level:Show();
 		end
@@ -101,6 +130,11 @@ function mod:UpdateItemSlots()
 			end
 		end
 	end
+	--gs
+	ex.info.gs = GearScore;
+	ex.gearScore:SetText("GS:" .. floor(GearScore));
+	local r,g,b = LibGearScoreMod.GearScore_GetQuality(GearScore);
+	ex.gearScore:SetTextColor(r,g,b);
 end
 
 --------------------------------------------------------------------------------------------------------

@@ -106,6 +106,8 @@ end
 function mod:OnClearInspect()
 	self:HasData(nil);
 	self.details:Clear();
+	ex.iLvlInfo:SetText("");
+	ex.gearScore:SetText("");
 end
 
 -- OnCompare
@@ -247,6 +249,7 @@ function mod:InitDetails()
 		details:Add("Min / Max Item Levels",iLvlMin.." / "..iLvlMax);
 	end
 	ex.info.iLvlAverage = (iLvlTotal / numItems);
+	ex.iLvlInfo:SetText(format("iLvl\n%.2f", ex.info.iLvlAverage));
 	-- Gems
 	details:Add("Gems");
 	details:Add("Number of Gems",gemCount);

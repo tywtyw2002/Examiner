@@ -368,13 +368,19 @@ ex.model = CreateFrame("PlayerModel",nil,ex);
 ex.model:SetSize(320,354);
 ex.model:SetPoint("BOTTOM",-11,10);
 ex.model:EnableMouse(true);
-ex.model:EnableMouseWheel(true);
+--ex.model:EnableMouseWheel(true);
 ex.model:SetScript("OnShow",Model_OnShow);
 ex.model:SetScript("OnUpdate",Model_OnUpdate);
 ex.model:SetScript("OnMouseDown",Model_OnMouseDown);
 ex.model:SetScript("OnMouseUp",Model_OnMouseUp);
-ex.model:SetScript("OnMouseWheel",Model_OnMouseWheel);
+--ex.model:SetScript("OnMouseWheel",Model_OnMouseWheel);
 
+-- iLvl
+ex.iLvlInfo = ex:CreateFontString(nil,"ARTWORK","GameFontNormal");
+ex.iLvlInfo:SetPoint("TOPRIGHT",-24,-32);
+--ex.iLvlInfo:SetText("iLvl\n201.11");
+ex.gearScore = ex:CreateFontString(nil,"ARTWORK","GameFontNormal");
+ex.gearScore:SetPoint("TOP",ex.iLvlInfo,"BOTTOM",0,-2);
 --------------------------------------------------------------------------------------------------------
 --                                            Unit Details                                            --
 --------------------------------------------------------------------------------------------------------

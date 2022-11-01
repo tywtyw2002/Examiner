@@ -1,4 +1,4 @@
-Examiner/Examiner.toclocal ex = Examiner;
+local ex = Examiner;
 
 -- Module
 local mod = ex:CreateModule("Gear","Gear List");

@@ -13,6 +13,7 @@ Libs\LibTableRecycler.lua
 Libs\LibItemString.lua
 Libs\LibHeroicItem.lua
 Libs\LibEnchantInfo.lua
+Libs\LibGearScoreMod.lua
 
 ## core ##
 Examiner.lua

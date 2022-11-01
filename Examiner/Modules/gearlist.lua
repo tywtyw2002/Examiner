@@ -369,9 +369,10 @@ for i = 1, NUM_BUTTONS do
 	btn.iconFrame.hasItem = true;
 
 	btn.level = btn.iconFrame:CreateFontString(nil,"ARTWORK","GameFontHighlightSmall");
-	btn.level:SetPoint("BOTTOM",0,1);
+	btn.level:SetPoint("CENTER");
+	--btn.level:SetPoint("BOTTOM",0,4);
 	btn.level:SetTextColor(1,1,1);
-	btn.level:SetFont(GameFontNormal:GetFont(),11,"OUTLINE");
+	btn.level:SetFont(GameFontNormal:GetFont(),12,"OUTLINE");
 
 	btn.icon = btn.iconFrame:CreateTexture(nil,"ARTWORK");
 	btn.icon:SetAllPoints();
@@ -475,9 +476,10 @@ for i = 1, 17 do
 	btn.iconFrame.hasItem = true;
 
 	btn.level = btn.iconFrame:CreateFontString(nil,"ARTWORK","GameFontHighlightSmall");
-	btn.level:SetPoint("BOTTOM",0,1);
+	--btn.level:SetPoint("BOTTOM",0,4);
+	btn.level:SetPoint("CENTER");
 	btn.level:SetTextColor(1,1,1);
-	btn.level:SetFont(GameFontNormal:GetFont(),11,"OUTLINE");
+	btn.level:SetFont(GameFontNormal:GetFont(),12,"OUTLINE");
 
 	btn.icon = btn.iconFrame:CreateTexture(nil,"ARTWORK");
 	btn.icon:SetAllPoints();

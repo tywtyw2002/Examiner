@@ -8,6 +8,7 @@ mod.help = "Right Click for extended menu";
 mod:CreatePage(false);
 mod:HasButton(true);
 mod.details = ex:CreateDetailObject();
+--mod.itemDetails = ex:CreateDetailObject();
 
 -- Variables
 local ITEM_HEIGHT = 12;
@@ -224,7 +225,9 @@ end
 -- Initialise Details
 function mod:InitDetails()
 	local details = self.details;
+	--local itemDetails = self.itemDetails;
 	details:Clear();
+	--itemDetails:Clear();
 	-- Unit Details
 	if (ex.unit) then
 		details:Add("Unit");
@@ -326,6 +329,8 @@ end
 local function BuildStatList()
 	displayList.count = 0;
 	local needHeader;
+	AddListEntry("Info");
+	AddListEntry("iLvl", format("%.2f",ex.info.iLvlAverage or 0));
 	-- Build display table
 	for _, statCat in ipairs(StatEntryOrder) do
 		needHeader = 1;
